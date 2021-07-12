@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--<?import java.net.URL?>-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.Client_Controller">
+   <children>
+      <Pane layoutX="-4.0" layoutY="-2.0" prefHeight="124.0" prefWidth="1179.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="WHITE" layoutX="511.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Snack Shop" wrappingWidth="181.22265625">
+               <font>
+                  <Font name="System Bold Italic" size="34.0" />
+               </font>
+            </Text>
+            <FontAwesomeIconView fill="#f2f0f0" glyphName="USER" layoutX="14.0" layoutY="104.0" size="30" />
+            <Text fx:id="user" fill="#fcfcfc" layoutX="38.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="319.9999990463257">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <ImageView fitHeight="63.0" fitWidth="70.0" layoutX="692.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/hamburger_96px.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Pane layoutX="-3.0" layoutY="120.0" prefHeight="665.0" prefWidth="1179.0">
+         <children>
+            <ImageView fitHeight="665.0" fitWidth="1179.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/kSOp97d.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="42.0" layoutY="457.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/facebook_96px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/instagram_96px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/twitter_96px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <JFXButton fx:id="setting" layoutX="50.0" layoutY="182.0" onAction="#btnsetting" prefHeight="63.0" prefWidth="255.0" style="-fx-background-radius: 50; -fx-background-color: #FF7F50;" text="EDIT PROFILE" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COG" size="30" />
+               </graphic>
+            </JFXButton>
+            <FontAwesomeIconView fill="WHITE" glyphName="COMMENTS" layoutX="-82.0" layoutY="-12.0" size="32" text="" wrappingWidth="36.0" />
+            <JFXButton fx:id="btnMenu" layoutX="50.0" layoutY="71.0" onAction="#btnMenuClick" prefHeight="63.0" prefWidth="255.0" style="-fx-background-radius: 50; -fx-background-color: #FF7F50;" text="Menu" textFill="#f8f8f8">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="34" />
+               </graphic>
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="73.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Follow us">
+               <font>
+                  <Font name="System Bold Italic" size="41.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="btnFeedback1" layoutX="50.0" layoutY="292.0" onAction="#btnFeedback" prefHeight="63.0" prefWidth="255.0" style="-fx-background-radius: 50; -fx-background-color: #FF7F50;" text="Feedback" textFill="WHITE">
+               <font>
+                  <Font size="29.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="COMMENTS" size="32" text="" wrappingWidth="36.0" />
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <HBox layoutX="882.0" layoutY="7.0" prefHeight="40.0" prefWidth="283.0" style="-fx-background-radius: 100; -fx-background-color: white;" styleClass="search-box-" stylesheets="@css_client.css">
+               <children>
+                  <JFXButton fx:id="btnSearch" onAction="#btnSearchClick" prefHeight="43.0" prefWidth="57.0" style="-fx-background-color: #0096FF; -fx-background-radius: 50;" styleClass="search-button-" text="Search" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <TextField fx:id="productname" alignment="CENTER" focusTraversable="false" prefHeight="43.0" prefWidth="149.0" promptText="Type here to search" style="-fx-background-color: rgba(0,0,0,0);">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <Text fill="WHITE" layoutX="704.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thanh xuân như một chén trà" wrappingWidth="371.6708984375">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="641.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Không ăn không uống hết bà thanh xuân" wrappingWidth="482.6708872616291">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

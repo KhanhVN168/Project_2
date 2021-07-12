@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="765.0" prefWidth="1118.0" style="-fx-background-color: Lavender;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.ProductIndexUIController">
+   <children>
+      <TableView fx:id="tvProduct" layoutX="16.0" layoutY="87.0" onMouseClicked="#onMouseClick" prefHeight="634.0" prefWidth="853.0" style="-fx-background-color: Lavender; -fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="tcName" prefWidth="235.00003051757812" text="Name" />
+          <TableColumn fx:id="tcPrice" prefWidth="118.0" text="Price" />
+            <TableColumn fx:id="tcProperties" prefWidth="124.0" text="Properties" />
+            <TableColumn fx:id="tcImages" prefWidth="191.0" text="Images" />
+            <TableColumn fx:id="tcCategory" prefWidth="184.0" text="Category" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnUpdate" layoutX="939.0" layoutY="404.0" onAction="#btnUpdateClick" prefHeight="53.0" prefWidth="116.0" style="-fx-background-color: gray;" text="Update" />
+      <JFXButton fx:id="btnDelete" layoutX="939.0" layoutY="489.0" onAction="#btnDeleteClick" prefHeight="53.0" prefWidth="116.0" style="-fx-background-color: gray;" text="Delete" />
+      <JFXButton fx:id="back" layoutX="14.0" layoutY="14.0" onAction="#btnBack" style="-fx-background-color: #d0c2c2;" text="Menu Admin">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#ff0b0b" glyphName="BARS" size="25" />
+         </graphic>
+      </JFXButton>
+      <ImageView fx:id="image" fitHeight="212.0" fitWidth="244.0" layoutX="875.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="btnInsert" layoutX="939.0" layoutY="321.0" onAction="#btnInsertClick" prefHeight="53.0" prefWidth="116.0" style="-fx-background-color: gray;" text="Insert" textAlignment="CENTER" />
+      <Text fx:id="u" layoutX="869.0" layoutY="566.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="250.99998438358307" />
+      <HBox layoutX="701.0" layoutY="18.0" prefHeight="40.0" prefWidth="283.0" style="-fx-background-radius: 100; -fx-background-color: white;" styleClass="search-box-" stylesheets="@css_client.css">
+         <children>
+            <JFXButton prefHeight="43.0" prefWidth="57.0" style="-fx-background-color: #0096FF; -fx-background-radius: 50;" styleClass="search-button-" text="Search" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtSearch" alignment="CENTER" focusTraversable="false" prefHeight="43.0" prefWidth="149.0" promptText="Type here to search" style="-fx-background-color: rgba(0,0,0,0);">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <Text layoutX="360.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Manager">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
